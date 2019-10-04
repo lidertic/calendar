@@ -1,11 +1,11 @@
 {
-  "name": "angular-electron",
-  "version": "6.1.0",
+  "name": "RaquelCalendar",
+  "version": "1.0.1",
   "description": "Angular 8 with Electron (Typescript + SASS + Hot Reload)",
-  "homepage": "https://github.com/maximegris/angular-electron",
+  "homepage": "",
   "author": {
-    "name": "Maxime GRIS",
-    "email": "maxime.gris@gmail.com"
+    "name": "",
+    "email": ""
   },
   "keywords": [
     "angular",
