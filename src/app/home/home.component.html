@@ -1,0 +1,34 @@
+<div class="container">
+  <h1 class="title">
+    {{ 'PAGES.HOME.TITLE' | translate }}
+  </h1>
+  <input #fileInput type="file" id="input" (change)="readFile($event)" />
+  <br>
+  <select #selectField name="miselect" (change)="canviMes($event.target.value)">
+    <option value="0">--Escull Mes--</option>
+    <option value="{{item.name}}" *ngFor="let item of sheets">{{item.name}}
+    </option>
+  </select>
+  <button (click)="reset()">RESET</button>
+  <div *ngIf="mesSelected">
+    <!-- <button (click)="view()">VIEW</button> -->
+    <button class="btn" (click)="generate()">GENERATE</button></div>
+</div>
+<div class="container" *ngIf="mesSelected">
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>KEY</th>
+      <th>FILA</th>
+      <th>COLUMNA</th>
+      <th>TEXT</th>
+    </tr>
+    <tr *ngFor="let element of dadesResum">
+      <td>{{element.id}}</td>
+      <td>{{element.key}}</td>
+      <td>{{element.fila}}</td>
+      <td>{{element.columna}}</td>
+      <td>{{element.text}}</td>
+    </tr>
+  </table>
+</div>
